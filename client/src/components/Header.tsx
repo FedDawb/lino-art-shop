@@ -1,5 +1,6 @@
 // ============================================================
-// LINO ART SHOP — Header / Navigation
+// SLOW STROKES — Header / Navigation
+// Butch lesbian artist's lino print shop
 // Dark charcoal bg, Playfair Display wordmark, ochre cart badge
 // ============================================================
 
@@ -11,6 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { href: "/shop", label: "Shop" },
+  { href: "/studio", label: "Studio Videos" },
   { href: "/about", label: "About" },
 ];
 
@@ -46,10 +48,10 @@ export default function Header() {
               className="text-xl font-bold tracking-tight text-[oklch(0.93_0.010_75)]"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Lino Art
+              Slow Strokes
             </span>
             <span className="label-mono text-[0.6rem] tracking-[0.2em]">
-              Original Prints
+              Hand-Printed Lino
             </span>
           </Link>
 

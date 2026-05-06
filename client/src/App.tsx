@@ -1,5 +1,6 @@
 // ============================================================
-// LINO ART SHOP — App Router
+// SLOW STROKES — App Router
+// Butch lesbian artist's lino print shop
 // Dark theme always on; CartProvider wraps all routes
 // ============================================================
 
@@ -17,6 +18,7 @@ import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
 import Checkout from "./pages/Checkout";
 import About from "./pages/About";
+import Studio from "./pages/Studio";
 import NotFound from "./pages/NotFound";
 
 function Router() {
@@ -29,6 +31,7 @@ function Router() {
           <Route path="/shop" component={Shop} />
           <Route path="/product/:id" component={ProductDetail} />
           <Route path="/checkout" component={Checkout} />
+          <Route path="/studio" component={Studio} />
           <Route path="/about" component={About} />
           <Route path="/404" component={NotFound} />
           <Route component={NotFound} />

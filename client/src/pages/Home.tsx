@@ -1,5 +1,6 @@
 // ============================================================
-// LINO ART SHOP — Home Page
+// SLOW STROKES — Home Page
+// Butch lesbian artist's lino print shop
 // Hero with studio image, featured prints, about teaser
 // ============================================================
 
@@ -39,13 +40,13 @@ export default function Home() {
             className="max-w-2xl"
           >
             <p className="label-mono mb-4">
-              Original Linocut Prints · Handmade in the UK
+              Hand-Carved Lino Prints by a Butch Lesbian Artist
             </p>
             <h1
               className="text-5xl md:text-7xl font-black text-[oklch(0.93_0.010_75)] leading-[1.05] mb-6"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Ink on Paper.
+              Slow Strokes.
               <br />
               <em className="text-[oklch(0.68_0.12_65)] not-italic">
                 Carved by Hand.
@@ -53,8 +54,9 @@ export default function Home() {
             </h1>
             <p className="text-[oklch(0.65_0.010_75)] text-base md:text-lg leading-relaxed mb-10 max-w-lg">
               Each print is individually hand-carved from lino and pulled by
-              hand in a small studio. No two prints are identical — every one
-              carries the mark of the maker.
+              hand. No two are identical. Every print carries the mark of the
+              maker — a queer artist creating work that celebrates the beauty
+              of slow, intentional craft.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/shop">
@@ -63,8 +65,8 @@ export default function Home() {
                   <ArrowRight size={14} />
                 </button>
               </Link>
-              <Link href="/about">
-                <button className="btn-ghost-ochre">About the Studio</button>
+              <Link href="/studio">
+                <button className="btn-ghost-ochre">Watch Me Print</button>
               </Link>
             </div>
           </motion.div>
@@ -129,23 +131,23 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="label-mono mb-3">The Process</p>
+              <p className="label-mono mb-3">The Craft</p>
               <h2
                 className="text-3xl md:text-4xl font-bold text-[oklch(0.93_0.010_75)] mb-6"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                From Block to Print
+                Slow, Intentional Work
               </h2>
               <p className="text-[oklch(0.60_0.010_75)] leading-relaxed mb-4">
-                Every print begins with a drawing, transferred to a lino block
-                and carved by hand using gouges of different widths. The block
-                is then inked with a brayer and pressed onto heavyweight paper —
-                a process unchanged for centuries.
+                Every print starts with a drawing or observation. I transfer it
+                to a lino block and carve it by hand, taking time with each line.
+                The block is then inked and pressed onto heavyweight paper — a
+                process that can't be rushed.
               </p>
               <p className="text-[oklch(0.60_0.010_75)] leading-relaxed mb-8">
-                Each edition is strictly limited. Once the edition is sold out,
-                the block is retired. What you receive is a genuine original
-                print, signed and numbered by the artist.
+                Each edition is strictly limited. Once sold out, the block is
+                retired. What you receive is a genuine original, signed and
+                numbered by me.
               </p>
               <Link href="/about">
                 <button className="btn-ghost-ochre flex items-center gap-2">
@@ -164,9 +166,9 @@ export default function Home() {
               className="grid grid-cols-2 gap-4"
             >
               {[
-                { value: "100%", label: "Hand-printed" },
+                { value: "100%", label: "Hand-carved & printed" },
                 { value: "Limited", label: "Editions only" },
-                { value: "300gsm", label: "Somerset Velvet paper" },
+                { value: "Queer", label: "Artist-owned" },
                 { value: "Worldwide", label: "Shipping available" },
               ].map(({ value, label }) => (
                 <div
@@ -203,11 +205,11 @@ export default function Home() {
               className="text-3xl md:text-5xl font-bold text-[oklch(0.93_0.010_75)] mb-6 max-w-2xl mx-auto"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Own a piece of the process
+              Own a piece of slow, queer craft
             </h2>
             <p className="text-[oklch(0.55_0.010_75)] mb-10 max-w-md mx-auto">
-              When an edition sells out, it's gone. Browse the current
-              collection while prints are still available.
+              When an edition sells out, it's gone for good. Browse the current
+              collection while prints are available.
             </p>
             <Link href="/shop">
               <button className="btn-ochre">Shop All Prints</button>

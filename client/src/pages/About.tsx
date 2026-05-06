@@ -1,5 +1,6 @@
 // ============================================================
-// LINO ART SHOP — About Page
+// SLOW STROKES — About Page
+// Butch lesbian artist's lino print shop
 // ============================================================
 
 import { motion } from "framer-motion";
@@ -27,12 +28,12 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <p className="label-mono mb-3">The Studio</p>
+              <p className="label-mono mb-3">The Artist</p>
               <h1
                 className="text-4xl md:text-5xl font-bold text-[oklch(0.93_0.010_75)]"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                About Lino Art
+                About Slow Strokes
               </h1>
             </motion.div>
           </div>
@@ -47,21 +48,24 @@ export default function About() {
           className="space-y-8"
         >
           <div>
-            <p className="label-mono mb-3 text-[oklch(0.68_0.12_65)]">The Work</p>
+            <p className="label-mono mb-3 text-[oklch(0.68_0.12_65)]">The Artist</p>
             <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base">
-              Every print in this shop is hand-carved and hand-printed in a small studio in the UK. The process begins with a drawing — sometimes a sketch from life, sometimes a composition developed over weeks — which is then transferred to a lino block and carved using a set of gouges.
+              I'm a butch lesbian artist making hand-carved, hand-printed lino art in a small studio. Every print is made with intention and care. I carve slowly, print deliberately, and believe in the value of work that can't be rushed.
+            </p>
+            <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base mt-4">
+              The name Slow Strokes is about the process itself — the deliberate, unhurried approach to carving and printing. It's also about queer joy, about taking up space, about making beautiful things on my own terms.
             </p>
           </div>
 
           <div className="ink-divider" />
 
           <div>
-            <p className="label-mono mb-3 text-[oklch(0.68_0.12_65)]">The Process</p>
+            <p className="label-mono mb-3 text-[oklch(0.68_0.12_65)]">The Craft</p>
             <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base mb-4">
-              Once carved, the block is inked with a brayer and pressed onto heavyweight Somerset Velvet paper — a paper made specifically for printmaking, with a surface that holds ink beautifully without bleeding. Each print is pulled individually, which means no two are exactly alike.
+              Every print begins with observation or imagination. I transfer the image to a lino block and carve it by hand using gouges of different widths. Once carved, the block is inked with a brayer and pressed onto heavyweight Somerset Velvet paper. Each print is pulled individually, which means no two are exactly alike.
             </p>
             <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base">
-              Every edition is strictly limited. When the edition is sold out, the block is retired and no further prints are made from it. Each print is signed in pencil and numbered by the artist.
+              Every edition is strictly limited. When sold out, the block is retired. What you receive is a genuine original, signed and numbered by me.
             </p>
           </div>
 
@@ -74,7 +78,7 @@ export default function About() {
                 { title: "Paper", body: "300gsm Somerset Velvet — a heavyweight, acid-free paper made in the UK specifically for printmaking." },
                 { title: "Ink", body: "Oil-based relief inks in carbon black. Rich, dense, and archival — prints will not fade for decades." },
                 { title: "Block", body: "Traditional grey lino mounted on MDF for stability. Carved by hand using a set of V and U gouges." },
-                { title: "Process", body: "Each print is pulled by hand using a baren or printing press. No digital reproduction is involved." },
+                { title: "Approach", body: "Each print is pulled by hand using a baren or printing press. No shortcuts, no digital reproduction. Just slow, intentional work." },
               ].map(({ title, body }) => (
                 <div key={title} className="bg-[oklch(0.16_0.005_285)] border border-white/8 p-5">
                   <p
@@ -94,14 +98,23 @@ export default function About() {
           <div>
             <p className="label-mono mb-3 text-[oklch(0.68_0.12_65)]">Caring for Your Print</p>
             <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base">
-              Lino prints are robust but should be kept away from direct sunlight and high humidity. Frame behind UV-protective glass for best longevity. Handle by the edges and avoid touching the printed surface.
+              Lino prints are robust and archival. Keep them away from direct sunlight and high humidity. Frame behind UV-protective glass for best longevity. Handle by the edges and avoid touching the printed surface.
+            </p>
+            <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base mt-4">
+              These prints are meant to be lived with. They age beautifully. They're made to last.
             </p>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-4 space-y-3">
             <Link href="/shop">
               <button className="btn-ochre flex items-center gap-2">
                 Browse the Collection
+                <ArrowRight size={14} />
+              </button>
+            </Link>
+            <Link href="/studio">
+              <button className="btn-ghost-ochre flex items-center gap-2">
+                Watch Me Print
                 <ArrowRight size={14} />
               </button>
             </Link>

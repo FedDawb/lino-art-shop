@@ -1,5 +1,6 @@
 // ============================================================
-// LINO ART SHOP — Product Catalogue
+// SLOW STROKES — Product Catalogue
+// Butch lesbian artist's lino print shop
 // To add a new print: copy one entry, update the fields,
 // and add your image URL from manus-upload-file --webdev
 // ============================================================

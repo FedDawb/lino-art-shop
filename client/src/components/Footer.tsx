@@ -1,5 +1,6 @@
 // ============================================================
-// LINO ART SHOP — Footer
+// SLOW STROKES — Footer
+// Butch lesbian artist's lino print shop
 // ============================================================
 
 import { Link } from "wouter";
@@ -15,13 +16,13 @@ export default function Footer() {
               className="text-xl font-bold text-[oklch(0.93_0.010_75)] mb-2"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Lino Art
+              Slow Strokes
             </p>
             <p className="label-mono text-[0.6rem] tracking-[0.2em] mb-4">
-              Original Prints
+              Hand-Printed Lino
             </p>
             <p className="text-[0.8rem] text-[oklch(0.55_0.010_75)] leading-relaxed max-w-xs">
-              Hand-carved, hand-printed lino art. Every print is an original — pulled by hand in a small studio in the UK.
+              Butch lesbian artist creating hand-carved, hand-printed lino art. Every print is an original — pulled by hand in a small studio.
             </p>
           </div>
 
@@ -34,6 +35,7 @@ export default function Footer() {
               {[
                 { href: "/", label: "Home" },
                 { href: "/shop", label: "Shop" },
+                { href: "/studio", label: "Studio Videos" },
                 { href: "/about", label: "About" },
               ].map(({ href, label }) => (
                 <li key={href}>
@@ -76,7 +78,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="label-mono text-[0.6rem] text-[oklch(0.40_0.010_75)]">
-            © {new Date().getFullYear()} Lino Art Prints. All rights reserved.
+            © {new Date().getFullYear()} Slow Strokes. All rights reserved.
           </p>
           <p className="label-mono text-[0.6rem] text-[oklch(0.40_0.010_75)]">
             Handmade in the UK · Shipped worldwide
