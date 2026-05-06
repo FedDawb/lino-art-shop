@@ -21,6 +21,7 @@ import About from "./pages/About";
 import Studio from "./pages/Studio";
 import CollectorStories from "./pages/CollectorStories";
 import SapphicCollection from "./pages/SapphicCollection";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 function Router() {
@@ -36,6 +37,7 @@ function Router() {
           <Route path="/studio" component={Studio} />
           <Route path="/sapphic" component={SapphicCollection} />
           <Route path="/stories" component={CollectorStories} />
+          <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />
           <Route path="/404" component={NotFound} />
           <Route component={NotFound} />

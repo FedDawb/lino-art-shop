@@ -59,6 +59,7 @@ export default function Footer() {
             </p>
             <ul className="space-y-3">
               {[
+                { href: "/contact", label: "Contact" },
                 { href: "/shipping-policy", label: "Shipping Policy" },
                 { href: "/returns", label: "Returns & Refunds" },
                 { href: "/care", label: "Print Care Guide" },
