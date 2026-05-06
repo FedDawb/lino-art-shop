@@ -191,6 +191,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Sapphic Collection teaser ────────────────────── */}
+      <section className="py-20 bg-[oklch(0.14_0.005_285)]">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <p className="label-mono mb-4">Celebrating Queer Love</p>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-[oklch(0.93_0.010_75)] mb-4 max-w-2xl mx-auto"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Sapphic Collection Coming Soon
+            </h2>
+            <p className="text-[oklch(0.60_0.010_75)] mb-8 max-w-md mx-auto">
+              Prints celebrating butch pride, femme power, and sapphic love. Hand-carved, hand-printed, queer-owned.
+            </p>
+            <Link href="/sapphic">
+              <button className="btn-ghost-ochre flex items-center gap-2 mx-auto">
+                Explore Sapphic Prints
+                <ArrowRight size={14} />
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Collector Stories teaser ────────────────────── */}
+      <section className="py-20 bg-[oklch(0.12_0.005_285)]">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <p className="label-mono mb-4">Community</p>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-[oklch(0.93_0.010_75)] mb-4 max-w-2xl mx-auto"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              How do you live with your print?
+            </h2>
+            <p className="text-[oklch(0.60_0.010_75)] mb-8 max-w-md mx-auto">
+              Share your story. Where it hangs, what it means to you, how it makes you feel.
+            </p>
+            <Link href="/stories">
+              <button className="btn-ghost-ochre flex items-center gap-2 mx-auto">
+                Read Collector Stories
+                <ArrowRight size={14} />
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── CTA banner ────────────────────────────────────── */}
       <section className="py-20 bg-[oklch(0.12_0.005_285)]">
         <div className="container text-center">

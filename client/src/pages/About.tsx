@@ -62,10 +62,16 @@ export default function About() {
           <div>
             <p className="label-mono mb-3 text-[oklch(0.68_0.12_65)]">The Craft</p>
             <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base mb-4">
-              Every print begins with observation or imagination. I transfer the image to a lino block and carve it by hand using gouges of different widths. Once carved, the block is inked with a brayer and pressed onto heavyweight Somerset Velvet paper. Each print is pulled individually, which means no two are exactly alike.
+              Every print begins with observation or imagination—a moment that moves me, a feeling I want to hold. I transfer it to the lino block and begin to touch it, to know it. The surface is smooth, cool, waiting. I run my fingers across it, feeling its texture, its grain. There's an intimacy in this first contact.
+            </p>
+            <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base mb-4">
+              Then comes the carving. I take the blade—sharp, deliberate—and begin my slow strokes. Each line is penetrative, intentional. I work into the block with pressure and care, feeling the resistance of the material, the give and take between my hand and the lino. The blade moves through the surface, revealing what lies beneath. It's rhythmic, meditative. There's a sensuality to it—the way the tool glides, the way the material responds to my touch.
+            </p>
+            <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base mb-4">
+              I caress the carved lines, smoothing them, feeling for imperfections. My fingers know every groove, every ridge. The block becomes familiar under my hands—intimate. When it's ready, I ink it with a brayer, rolling the ink across the surface with slow, deliberate strokes. The block is now slick, glistening, alive.
             </p>
             <p className="text-[oklch(0.70_0.010_75)] leading-relaxed text-base">
-              Every edition is strictly limited. When sold out, the block is retired. What you receive is a genuine original, signed and numbered by me.
+              Then I press it onto paper—a moment of contact, of pressure, of release. The image emerges. Each print is pulled individually, which means no two are exactly alike. Every edition is strictly limited. When sold out, the block is retired. What you receive is a genuine original—a record of my hands, my time, my desire to create something beautiful.
             </p>
           </div>
 

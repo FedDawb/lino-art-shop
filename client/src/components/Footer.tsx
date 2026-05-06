@@ -35,7 +35,9 @@ export default function Footer() {
               {[
                 { href: "/", label: "Home" },
                 { href: "/shop", label: "Shop" },
+                { href: "/sapphic", label: "Sapphic Collection" },
                 { href: "/studio", label: "Studio Videos" },
+                { href: "/stories", label: "Collector Stories" },
                 { href: "/about", label: "About" },
               ].map(({ href, label }) => (
                 <li key={href}>

@@ -19,6 +19,8 @@ import ProductDetail from "./pages/ProductDetail";
 import Checkout from "./pages/Checkout";
 import About from "./pages/About";
 import Studio from "./pages/Studio";
+import CollectorStories from "./pages/CollectorStories";
+import SapphicCollection from "./pages/SapphicCollection";
 import NotFound from "./pages/NotFound";
 
 function Router() {
@@ -32,6 +34,8 @@ function Router() {
           <Route path="/product/:id" component={ProductDetail} />
           <Route path="/checkout" component={Checkout} />
           <Route path="/studio" component={Studio} />
+          <Route path="/sapphic" component={SapphicCollection} />
+          <Route path="/stories" component={CollectorStories} />
           <Route path="/about" component={About} />
           <Route path="/404" component={NotFound} />
           <Route component={NotFound} />
