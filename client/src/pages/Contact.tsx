@@ -1,11 +1,11 @@
 // ============================================================
 // SLOW STROKES — Contact Page
-// Returns, inquiries, and customer support
+// Returns, inquiries, customer support, social links, and mailing list
 // ============================================================
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, CheckCircle } from "lucide-react";
+import { Mail, MessageSquare, CheckCircle, Instagram, Music2, Heart } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,7 +14,9 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [mailingListEmail, setMailingListEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [mailingListSubmitted, setMailingListSubmitted] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -25,7 +27,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send to a backend or email service
     console.log("Contact form submitted:", formData);
     setSubmitted(true);
     setTimeout(() => {
@@ -33,6 +34,37 @@ export default function Contact() {
       setSubmitted(false);
     }, 3000);
   };
+
+  const handleMailingListSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Mailing list signup:", mailingListEmail);
+    setMailingListSubmitted(true);
+    setTimeout(() => {
+      setMailingListEmail("");
+      setMailingListSubmitted(false);
+    }, 3000);
+  };
+
+  const socialLinks = [
+    {
+      name: "Instagram",
+      icon: Instagram,
+      url: "https://instagram.com", // Replace with your Instagram URL
+      color: "hover:text-pink-400",
+    },
+    {
+      name: "TikTok",
+      icon: Music2,
+      url: "https://tiktok.com", // Replace with your TikTok URL
+      color: "hover:text-white",
+    },
+    {
+      name: "Email",
+      icon: Mail,
+      url: "mailto:contact@slowstrokes.com", // Replace with your email
+      color: "hover:text-[oklch(0.68_0.12_65)]",
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -57,22 +89,172 @@ export default function Contact() {
               className="text-5xl md:text-6xl font-black text-[oklch(0.93_0.010_75)] leading-[1.05] mb-6"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Questions?
-              <br />
-              <em className="text-[oklch(0.68_0.12_65)] not-italic">
-                We're here to help.
-              </em>
+              Let's Connect
             </h1>
             <p className="text-[oklch(0.65_0.010_75)] text-base md:text-lg leading-relaxed">
-              Have questions about your order, need help with a return, or just want to chat? Fill out the form below and we'll get back to you soon.
+              Have questions about your order, want to collaborate, or just want to say hi? Reach out through any channel below.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Social Links Section */}
       <section className="py-20 bg-[oklch(0.12_0.005_285)]">
         <div className="container max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <p className="label-mono mb-3">Follow & Connect</p>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-[oklch(0.93_0.010_75)] mb-4"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Find us on social
+            </h2>
+            <p className="text-[oklch(0.60_0.010_75)]">
+              Behind-the-scenes studio content, new prints, and community moments
+            </p>
+          </motion.div>
+
+          {/* Social Icons */}
+          <div className="flex justify-center gap-8 mb-16">
+            {socialLinks.map((social, i) => {
+              const Icon = social.icon;
+              return (
+                <motion.a
+                  key={social.name}
+                  href={social.url}
+                  target={social.name !== "Email" ? "_blank" : undefined}
+                  rel={social.name !== "Email" ? "noopener noreferrer" : undefined}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: i * 0.1 }}
+                  className={`p-4 bg-[oklch(0.16_0.005_285)] border border-white/10 rounded-full text-[oklch(0.68_0.12_65)] transition-all duration-300 ${social.color} hover:border-[oklch(0.68_0.12_65)] hover:scale-110`}
+                  title={social.name}
+                >
+                  <Icon size={28} />
+                </motion.a>
+              );
+            })}
+          </div>
+
+          {/* Direct Email CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-[oklch(0.16_0.005_285)] border border-[oklch(0.68_0.12_65/30%)] p-8 text-center"
+          >
+            <Mail size={32} className="text-[oklch(0.68_0.12_65)] mx-auto mb-4" />
+            <h3
+              className="text-xl font-bold text-[oklch(0.93_0.010_75)] mb-2"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Email us directly
+            </h3>
+            <p className="text-[oklch(0.60_0.010_75)] mb-4">
+              For any questions, custom orders, or collaboration inquiries
+            </p>
+            <a
+              href="mailto:contact@slowstrokes.com"
+              className="inline-block px-6 py-3 bg-[oklch(0.68_0.12_65)] text-[oklch(0.12_0.005_285)] font-semibold hover:bg-[oklch(0.75_0.12_65)] transition-colors"
+            >
+              contact@slowstrokes.com
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Mailing List Section */}
+      <section className="py-20 bg-[oklch(0.14_0.005_285)]">
+        <div className="container max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="bg-gradient-to-br from-[oklch(0.16_0.005_285)] to-[oklch(0.12_0.005_285)] border border-[oklch(0.68_0.12_65/30%)] p-10 md:p-12">
+              <div className="flex items-start gap-4 mb-6">
+                <Heart size={28} className="text-[oklch(0.68_0.12_65)] flex-shrink-0 mt-1" />
+                <div>
+                  <h2
+                    className="text-2xl md:text-3xl font-bold text-[oklch(0.93_0.010_75)] mb-2"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    Join our mailing list
+                  </h2>
+                  <p className="text-[oklch(0.60_0.010_75)]">
+                    Be the first to know about limited edition prints, special offers, and new projects
+                  </p>
+                </div>
+              </div>
+
+              {mailingListSubmitted ? (
+                <div className="bg-[oklch(0.16_0.005_285)] border border-[oklch(0.68_0.12_65)] p-6 text-center">
+                  <CheckCircle
+                    size={40}
+                    className="text-[oklch(0.68_0.12_65)] mx-auto mb-3"
+                  />
+                  <p className="text-[oklch(0.93_0.010_75)] font-semibold mb-1">
+                    Thanks for signing up!
+                  </p>
+                  <p className="text-[oklch(0.60_0.010_75)] text-sm">
+                    Check your email for confirmation
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleMailingListSubmit} className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    value={mailingListEmail}
+                    onChange={(e) => setMailingListEmail(e.target.value)}
+                    required
+                    placeholder="your@email.com"
+                    className="flex-1 bg-[oklch(0.16_0.005_285)] border border-white/10 text-[oklch(0.85_0.010_75)] px-4 py-3 focus:border-[oklch(0.68_0.12_65)] focus:outline-none transition-colors"
+                  />
+                  <button
+                    type="submit"
+                    className="px-6 py-3 bg-[oklch(0.68_0.12_65)] text-[oklch(0.12_0.005_285)] font-semibold hover:bg-[oklch(0.75_0.12_65)] transition-colors whitespace-nowrap"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              )}
+
+              <p className="text-[0.7rem] text-[oklch(0.40_0.010_75)] mt-4">
+                We respect your privacy. Unsubscribe at any time.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-[oklch(0.12_0.005_285)]">
+        <div className="container max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-12"
+          >
+            <p className="label-mono mb-3">Direct Message</p>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-[oklch(0.93_0.010_75)]"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Send us a message
+            </h2>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -147,6 +329,7 @@ export default function Contact() {
                     <option value="damage">Damaged Print</option>
                     <option value="shipping">Shipping Issue</option>
                     <option value="custom">Custom Order Inquiry</option>
+                    <option value="collaboration">Collaboration</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
