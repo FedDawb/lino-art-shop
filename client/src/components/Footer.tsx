@@ -35,6 +35,7 @@ export default function Footer() {
               {[
                 { href: "/", label: "Home" },
                 { href: "/shop", label: "Shop" },
+                { href: "/rough-cuts", label: "Rough Cuts" },
                 { href: "/sapphic", label: "Sapphic Collection" },
                 { href: "/studio", label: "Studio Videos" },
                 { href: "/stories", label: "Collector Stories" },
