@@ -4,6 +4,7 @@
 // ============================================================
 
 import { Link } from "wouter";
+import { Instagram, Music } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -80,13 +81,35 @@ export default function Footer() {
 
         <div className="ink-divider mt-12 mb-6" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="label-mono text-[0.6rem] text-[oklch(0.40_0.010_75)]">
-            © {new Date().getFullYear()} Slow Strokes. All rights reserved.
-          </p>
-          <p className="label-mono text-[0.6rem] text-[oklch(0.40_0.010_75)]">
-            Handmade in the UK · Shipped worldwide
-          </p>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <a
+              href="https://tiktok.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[oklch(0.55_0.010_75)] hover:text-[oklch(0.68_0.12_65)] transition-colors"
+              aria-label="Follow on TikTok"
+            >
+              <Music size={18} />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[oklch(0.55_0.010_75)] hover:text-[oklch(0.68_0.12_65)] transition-colors"
+              aria-label="Follow on Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+          </div>
+          <div className="flex flex-col md:flex-row items-center gap-3">
+            <p className="label-mono text-[0.6rem] text-[oklch(0.40_0.010_75)]">
+              © {new Date().getFullYear()} Slow Strokes. All rights reserved.
+            </p>
+            <p className="label-mono text-[0.6rem] text-[oklch(0.40_0.010_75)]">
+              Handmade in the UK · Shipped worldwide
+            </p>
+          </div>
         </div>
       </div>
     </footer>

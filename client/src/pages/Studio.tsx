@@ -79,57 +79,42 @@ export default function Studio() {
           </p>
         </motion.div>
 
-        {/* Video grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {videos.map((video, i) => (
-            <motion.div
-              key={video.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              onClick={() => setSelectedVideo(video)}
-              className="group cursor-pointer"
+        {/* Coming Soon Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-16 bg-gradient-to-br from-[oklch(0.16_0.005_285)] to-[oklch(0.12_0.005_285)] border border-[oklch(0.68_0.12_65/20%)] p-16 text-center"
+        >
+          <p className="label-mono mb-4 text-[oklch(0.68_0.12_65)]">Coming Soon</p>
+          <h2
+            className="text-4xl md:text-5xl font-bold text-[oklch(0.93_0.010_75)] mb-6"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Studio Videos Coming Soon
+          </h2>
+          <p className="text-[oklch(0.60_0.010_75)] max-w-2xl mx-auto text-lg leading-relaxed mb-8">
+            Silhouette films of the carving and printing process are being filmed and edited. Follow my TikTok and Instagram for updates on when these will be released.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <a
+              href="https://tiktok.com" // Replace with your TikTok URL
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-[oklch(0.68_0.12_65)] text-[oklch(0.12_0.005_285)] hover:bg-[oklch(0.75_0.12_65)] transition-colors font-semibold"
             >
-              <div className="relative aspect-video bg-[oklch(0.16_0.005_285)] border border-white/10 overflow-hidden hover:border-[oklch(0.68_0.12_65/50%)] transition-all duration-300">
-                {/* Placeholder thumbnail */}
-                <div className="w-full h-full bg-gradient-to-br from-[oklch(0.20_0.005_285)] to-[oklch(0.14_0.005_285)] flex items-center justify-center">
-                  <div className="text-center">
-                    <Play
-                      size={48}
-                      strokeWidth={1}
-                      className="text-[oklch(0.68_0.12_65/60%)] group-hover:text-[oklch(0.68_0.12_65)] transition-colors mx-auto mb-2"
-                    />
-                    <p className="label-mono text-[0.6rem] text-[oklch(0.50_0.010_75)]">
-                      {video.duration}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-[oklch(0.12_0.005_285/70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Play
-                    size={56}
-                    strokeWidth={1}
-                    className="text-[oklch(0.68_0.12_65)]"
-                  />
-                </div>
-              </div>
-
-              {/* Video info */}
-              <div className="mt-4">
-                <h3
-                  className="text-lg font-bold text-[oklch(0.90_0.010_75)] mb-2 group-hover:text-[oklch(0.68_0.12_65)] transition-colors"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  {video.title}
-                </h3>
-                <p className="text-[0.8rem] text-[oklch(0.55_0.010_75)] leading-relaxed">
-                  {video.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              Follow on TikTok
+            </a>
+            <a
+              href="https://instagram.com" // Replace with your Instagram URL
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-[oklch(0.68_0.12_65)] text-[oklch(0.68_0.12_65)] hover:bg-[oklch(0.68_0.12_65)] hover:text-[oklch(0.12_0.005_285)] transition-colors font-semibold"
+            >
+              Follow on Instagram
+            </a>
+          </div>
+        </motion.div>
 
         {/* Info section */}
         <div className="bg-[oklch(0.16_0.005_285)] border border-white/8 p-8 md:p-10">
@@ -153,64 +138,7 @@ export default function Studio() {
           </div>
         </div>
 
-        {/* Modal for video playback */}
-        {selectedVideo && (
-          <div
-            className="fixed inset-0 z-50 bg-[oklch(0.08_0.005_285/95%)] backdrop-blur-sm flex items-center justify-center p-4"
-            onClick={() => setSelectedVideo(null)}
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-3xl"
-            >
-              <div className="bg-[oklch(0.12_0.005_285)] border border-white/10 overflow-hidden">
-                {/* Video placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-[oklch(0.20_0.005_285)] to-[oklch(0.14_0.005_285)] flex items-center justify-center">
-                  <div className="text-center">
-                    <Play
-                      size={64}
-                      strokeWidth={1}
-                      className="text-[oklch(0.68_0.12_65/60%)] mx-auto mb-4"
-                    />
-                    <p className="label-mono text-[0.7rem] text-[oklch(0.50_0.010_75)]">
-                      Video player placeholder
-                    </p>
-                    <p className="label-mono text-[0.65rem] text-[oklch(0.40_0.010_75)] mt-2">
-                      Add your video URL to enable playback
-                    </p>
-                  </div>
-                </div>
 
-                {/* Video details */}
-                <div className="p-6">
-                  <h2
-                    className="text-2xl font-bold text-[oklch(0.93_0.010_75)] mb-2"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
-                    {selectedVideo.title}
-                  </h2>
-                  <p className="text-[oklch(0.60_0.010_75)] leading-relaxed mb-4">
-                    {selectedVideo.description}
-                  </p>
-                  <p className="label-mono text-[0.6rem] text-[oklch(0.50_0.010_75)]">
-                    Duration: {selectedVideo.duration}
-                  </p>
-                </div>
-              </div>
-
-              {/* Close button */}
-              <button
-                onClick={() => setSelectedVideo(null)}
-                className="mt-4 w-full label-mono text-[0.65rem] text-[oklch(0.50_0.010_75)] hover:text-[oklch(0.68_0.12_65)] transition-colors"
-              >
-                Press ESC or click to close
-              </button>
-            </motion.div>
-          </div>
-        )}
       </div>
     </div>
   );
