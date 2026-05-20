@@ -107,6 +107,22 @@ export const products: Product[] = [
     inStock: true,
     stockCount: 4,
   },
+  {
+    id: "spring-burst",
+    name: "Spring Burst",
+    tagline: "The language of pressure and touch",
+    description:
+      "Hand-pressed into thick, textured paper, this print reveals the intimate geography of my hands. Where I pressed deepest—where my body leaned into the block with intention—the blooms emerge luminous and full. Where my touch faltered, the ink whispers softly, showing me exactly where to return, where to press harder next time. The chatter marks are not mistakes. They are a conversation between my hands and the paper, a record of vulnerability and learning. Each uneven line, each stuttering bloom, is a love letter to the work itself. This is what it means to carve by hand—to leave evidence of exactly how much you cared.",
+    price: 3500,
+    edition: "One-of-a-kind",
+    size: "A3 (29.7 × 42 cm)",
+    paper: "Thick, deep-textured handmade paper, cream",
+    ink: "Oil-based relief ink, black",
+    category: "Botanicals",
+    image: "/manus-storage/20260520_114547_be7a5b03.jpg",
+    inStock: true,
+    stockCount: 1,
+  },
 ];
 
 export const categories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
