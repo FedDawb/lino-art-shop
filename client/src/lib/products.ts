@@ -139,6 +139,22 @@ export const products: Product[] = [
     inStock: true,
     stockCount: 25,
   },
+  {
+    id: "botanical-tester",
+    name: "Botanical Tester",
+    tagline: "Testing the love in every line",
+    description:
+      "This is the print that taught me something. A tester, pulled to check the block, to feel the resistance of the lino under my hands, to watch how the ink flows across the paper. Every tester is a conversation between maker and material. Here, the blooms emerged full and alive, each petal a small victory of pressure and intention. The tester is where I fall in love with the work all over again, where I can feel the potential in my own hands. This is the print that came before the edition, the one that whispered yes, keep going. It carries the joy of the making process, the testing of pressure, the discovery of what this block wants to become. A love letter to the craft itself.",
+    price: 1800,
+    edition: "One-of-a-kind Tester",
+    size: "A5 (14.8 x 21 cm)",
+    paper: "300gsm Somerset Velvet",
+    ink: "Oil-based relief ink, black",
+    category: "Botanicals",
+    image: "/manus-storage/Screenshot_20260424_171949_Gallery_8ddf7e5f.jpg",
+    inStock: true,
+    stockCount: 1,
+  },
 ];
 
 export const categories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
