@@ -123,6 +123,22 @@ export const products: Product[] = [
     inStock: true,
     stockCount: 1,
   },
+  {
+    id: "classic-butch",
+    name: "Classic Butch",
+    tagline: "Hand in pocket. Unmistakable stance.",
+    description:
+      "There is a language in how a butch holds herself. Hand resting in denim pocket, belt buckle catching the light, plaid shirt worn like armor and comfort all at once. This is the portrait of quiet confidence, of a woman who knows exactly who she is. The recognisable details tell a story that sapphic women understand without words. It is a celebration of the butch aesthetic, carved with reverence for every woman who has ever felt this kind of power in her own skin. A love letter to the women who make us weak in the knees.",
+    price: 1800,
+    edition: "Edition of 40",
+    size: "A5 (14.8 x 21 cm)",
+    paper: "300gsm Somerset Velvet",
+    ink: "Oil-based relief ink, black",
+    category: "Sapphic",
+    image: "/manus-storage/20260429_230138_6d72b88d.jpg",
+    inStock: true,
+    stockCount: 25,
+  },
 ];
 
 export const categories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
