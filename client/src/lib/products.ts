@@ -155,6 +155,22 @@ export const products: Product[] = [
     inStock: true,
     stockCount: 1,
   },
+  {
+    id: "crow-at-dawn",
+    name: "Crow at Dawn",
+    tagline: "Black and gold beneath the sun",
+    description:
+      "This crow arrives at the moment between night and light. Carved with intention into the finest paper, the delicate surface holds the dual inks like a secret. The black body is rendered in bold, confident strokes, each feather a small act of precision. But it is the gold that transforms this print into something luminous. The sun above radiates in warm metallic lines, the branch beneath glows with amber life. Working with two inks on such thin, delicate paper demands absolute control. The pressure must be exact, the touch deliberate. Too much force and the paper tears. Too little and the gold whispers away to nothing. This print is the result of that conversation between my hands and the paper, between intention and fragility. The crow watches over it all, patient and knowing.",
+    price: 2800,
+    edition: "Edition of 5",
+    size: "A4 (21 × 29.7 cm)",
+    paper: "Thin, delicate handmade paper, cream",
+    ink: "Oil-based relief ink, black and gold",
+    category: "Wildlife",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663573053168/4U2XijTtpH8LNJPLuiQvAu/crow-gold-black-qR7mK2pN9xL5vB8zC3dW1f.webp",
+    inStock: true,
+    stockCount: 5,
+  },
 ];
 
 export const categories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
