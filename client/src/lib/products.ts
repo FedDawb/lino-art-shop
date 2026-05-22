@@ -167,7 +167,7 @@ export const products: Product[] = [
     paper: "Thin, delicate handmade paper, cream",
     ink: "Oil-based relief ink, black and gold",
     category: "Wildlife",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663573053168/4U2XijTtpH8LNJPLuiQvAu/crow-gold-black-qR7mK2pN9xL5vB8zC3dW1f.webp",
+    image: "/manus-storage/crow-gold-black_14cb21ad.png",
     inStock: true,
     stockCount: 5,
   },
