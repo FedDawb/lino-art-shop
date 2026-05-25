@@ -23,6 +23,7 @@ import CollectorStories from "./pages/CollectorStories";
 import SapphicCollection from "./pages/SapphicCollection";
 import Contact from "./pages/Contact";
 import RoughCuts from "./pages/RoughCuts";
+import OtherArt from "./pages/OtherArt";
 import NotFound from "./pages/NotFound";
 
 function Router() {
@@ -40,6 +41,7 @@ function Router() {
           <Route path="/stories" component={CollectorStories} />
           <Route path="/contact" component={Contact} />
           <Route path="/rough-cuts" component={RoughCuts} />
+          <Route path="/other-art" component={OtherArt} />
           <Route path="/about" component={About} />
           <Route path="/404" component={NotFound} />
           <Route component={NotFound} />

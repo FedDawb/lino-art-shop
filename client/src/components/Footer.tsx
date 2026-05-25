@@ -36,6 +36,7 @@ export default function Footer() {
               {[
                 { href: "/", label: "Home" },
                 { href: "/shop", label: "Shop" },
+                { href: "/other-art", label: "Other Art" },
                 { href: "/rough-cuts", label: "Rough Cuts" },
                 { href: "/sapphic", label: "Sapphic Collection" },
                 { href: "/studio", label: "Studio Videos" },
@@ -84,7 +85,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <a
-              href="https://tiktok.com"
+              href="https://tiktok.com/@slowstrokesbutch"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[oklch(0.55_0.010_75)] hover:text-[oklch(0.68_0.12_65)] transition-colors"
@@ -93,7 +94,7 @@ export default function Footer() {
               <Music size={18} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/slowstrokeart"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[oklch(0.55_0.010_75)] hover:text-[oklch(0.68_0.12_65)] transition-colors"

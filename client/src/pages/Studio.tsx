@@ -98,7 +98,7 @@ export default function Studio() {
           </p>
           <div className="flex gap-4 justify-center">
             <a
-              href="https://tiktok.com" // Replace with your TikTok URL
+              href="https://tiktok.com/@slowstrokesbutch"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-[oklch(0.68_0.12_65)] text-[oklch(0.12_0.005_285)] hover:bg-[oklch(0.75_0.12_65)] transition-colors font-semibold"
@@ -106,7 +106,7 @@ export default function Studio() {
               Follow on TikTok
             </a>
             <a
-              href="https://instagram.com" // Replace with your Instagram URL
+              href="https://instagram.com/slowstrokeart"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border border-[oklch(0.68_0.12_65)] text-[oklch(0.68_0.12_65)] hover:bg-[oklch(0.68_0.12_65)] hover:text-[oklch(0.12_0.005_285)] transition-colors font-semibold"

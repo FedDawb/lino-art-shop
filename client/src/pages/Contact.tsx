@@ -49,19 +49,19 @@ export default function Contact() {
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com", // Replace with your Instagram URL
+      url: "https://instagram.com/slowstrokeart",
       color: "hover:text-pink-400",
     },
     {
       name: "TikTok",
       icon: Music2,
-      url: "https://tiktok.com", // Replace with your TikTok URL
+      url: "https://tiktok.com/@slowstrokesbutch",
       color: "hover:text-white",
     },
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:contact@slowstrokes.com", // Replace with your email
+      url: "mailto:dlah@slowstrokesart.com",
       color: "hover:text-[oklch(0.68_0.12_65)]",
     },
   ];
@@ -162,10 +162,10 @@ export default function Contact() {
               For any questions, custom orders, or collaboration inquiries
             </p>
             <a
-              href="mailto:contact@slowstrokes.com"
+              href="mailto:dlah@slowstrokesart.com"
               className="inline-block px-6 py-3 bg-[oklch(0.68_0.12_65)] text-[oklch(0.12_0.005_285)] font-semibold hover:bg-[oklch(0.75_0.12_65)] transition-colors"
             >
-              contact@slowstrokes.com
+              dlah@slowstrokesart.com
             </a>
           </motion.div>
         </div>
