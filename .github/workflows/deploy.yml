@@ -25,14 +25,12 @@ jobs:
         
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        # We removed the hardcoded version key here so it reads your package.json version automatically!
         
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'pnpm'
-          cache-dependency-path: './client/pnpm-lock.yaml'
+          # We completely removed the strict caching lines here!
         
       - name: Install dependencies
         run: |
