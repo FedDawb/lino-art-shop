@@ -30,7 +30,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          # We completely removed the strict caching lines here!
         
       - name: Install dependencies
         run: |
@@ -41,10 +40,15 @@ jobs:
         run: |
           cd client
           pnpm run build
+          echo "--- Root directory contents ---"
+          ls -la ..
+          echo "--- Client directory contents ---"
+          ls -la
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # If Vite put the built files in the root 'dist' instead of 'client/dist', this fallback check handles it
           path: './client/dist'
           
       - name: Deploy to GitHub Pages
