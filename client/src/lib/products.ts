@@ -34,7 +34,7 @@ export const products: Product[] = [
     paper: "Thick, deep-texture paper, cream",
     ink: "Water-based ink, black",
     category: "Botanicals",
-    image: "client\public\images\fern.jpg",
+    image: "/images/fern.jpg",
     inStock: true,
     stockCount: 12,
   },
