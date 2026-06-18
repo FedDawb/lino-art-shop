@@ -50,7 +50,7 @@ export const products: Product[] = [
     paper: "300gsm Somerset Velvet",
     ink: "Water-based relief ink, black",
     category: "Sapphic",
-    image: "/images/classic-butch.jpg",
+    image: "/images/classicbutch.jpg",
     inStock: true,
     stockCount: 25,
   },
