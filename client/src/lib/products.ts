@@ -66,9 +66,9 @@ export const products: Product[] = [
     paper: "300gsm Somerset Velvet",
     ink: "Oil-based relief ink, black",
     category: "Botanicals",
-    image: "/manus-storage/Screenshot_20260424_171949_Gallery_8ddf7e5f.jpg",
+    image: "/images/botanicaltester.jpg",
     inStock: true,
-    stockCount: 1,
+    stockCount: 12,
   },
   {
     id: "crow-at-dawn",
